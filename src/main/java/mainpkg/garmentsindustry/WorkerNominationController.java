@@ -106,7 +106,4 @@ public class WorkerNominationController
 
     }
 
-    @javafx.fxml.FXML
-    public void saveOnClick(ActionEvent actionEvent) {
-    }
 }
