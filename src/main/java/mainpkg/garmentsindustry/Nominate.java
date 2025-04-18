@@ -3,16 +3,25 @@ package mainpkg.garmentsindustry;
 public class Nominate {
     String workerName;
     int workeId;
-    int PhoneNumber;
     String awardCategory;
-    String Address;
+    String reason;
 
-    public Nominate(String workerName, int workeId, int phoneNumber, String awardCategory, String address) {
+
+    @Override
+    public String toString() {
+        return "Nominate{" +
+                "workerName='" + workerName + '\'' +
+                ", workeId=" + workeId +
+                ", awardCategory='" + awardCategory + '\'' +
+                ", reason='" + reason + '\'' +
+                '}';
+    }
+
+    public Nominate(String workerName, int workeId, String awardCategory, String reason) {
         this.workerName = workerName;
         this.workeId = workeId;
-        PhoneNumber = phoneNumber;
         this.awardCategory = awardCategory;
-        Address = address;
+        this.reason = reason;
     }
 
     public String getWorkerName() {
@@ -31,13 +40,6 @@ public class Nominate {
         this.workeId = workeId;
     }
 
-    public int getPhoneNumber() {
-        return PhoneNumber;
-    }
-
-    public void setPhoneNumber(int phoneNumber) {
-        PhoneNumber = phoneNumber;
-    }
 
     public String getAwardCategory() {
         return awardCategory;
@@ -47,22 +49,11 @@ public class Nominate {
         this.awardCategory = awardCategory;
     }
 
-    public String getAddress() {
-        return Address;
+    public String getReason() {
+        return reason;
     }
 
-    public void setAddress(String address) {
-        Address = address;
-    }
-
-    @Override
-    public String toString() {
-        return "Nominate{" +
-                "workerName='" + workerName + '\'' +
-                ", workeId=" + workeId +
-                ", PhoneNumber=" + PhoneNumber +
-                ", awardCategory='" + awardCategory + '\'' +
-                ", Address='" + Address + '\'' +
-                '}';
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 }

@@ -23,13 +23,13 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="142.0" layoutY="105.0" prefHeight="22.0" prefWidth="95.0" text="Employee Id" textFill="WHITE">
+      <Label layoutX="142.0" layoutY="105.0" prefHeight="22.0" prefWidth="95.0" text="Worker Id" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
       <TextField fx:id="nameTextField" layoutX="273.0" layoutY="67.0" prefHeight="26.0" prefWidth="206.0" />
-      <TextField fx:id="employeeIDTF" layoutX="273.0" layoutY="105.0" prefHeight="26.0" prefWidth="206.0" />
+      <TextField fx:id="WorkerIDTF" layoutX="273.0" layoutY="105.0" prefHeight="26.0" prefWidth="206.0" />
       <Button layoutX="258.0" layoutY="295.0" mnemonicParsing="false" onAction="#NominatebuttonOA" prefHeight="26.0" prefWidth="95.0" text="Nominate" />
       <AnchorPane blendMode="SCREEN" layoutX="-182.0" layoutY="3.0" prefHeight="516.0" prefWidth="34.0">
          <children>
@@ -63,14 +63,14 @@
       </Label>
       <ComboBox fx:id="awardcategoryComboFilter" layoutX="508.0" layoutY="67.0" prefHeight="22.0" prefWidth="140.0" />
       <Button layoutX="522.0" layoutY="105.0" mnemonicParsing="false" onAction="#saveOnClick" prefHeight="26.0" prefWidth="111.0" text="Filter by category" />
-      <Label layoutX="376.0" layoutY="299.0" prefHeight="20.0" prefWidth="152.0" text="Error" textFill="#e4adad">
+      <Label fx:id="ErrorL" layoutX="376.0" layoutY="299.0" prefHeight="20.0" prefWidth="152.0" text="Error" textFill="#e4adad">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
       <TableView fx:id="nominateTV" layoutX="128.0" layoutY="328.0" prefHeight="235.0" prefWidth="540.0">
         <columns>
-          <TableColumn fx:id="EmpIdTC" prefWidth="125.5999755859375" text="Employee Id" />
+          <TableColumn fx:id="WorkerIdTc" prefWidth="125.5999755859375" text="Worker Id" />
           <TableColumn fx:id="nameTC" prefWidth="84.80001831054688" text="Name" />
             <TableColumn fx:id="awardCataegoryTC" prefWidth="133.5999755859375" text="Award Category" />
             <TableColumn fx:id="resonforNominateTC" prefWidth="196.80007934570312" text="Reason for Nominate" />
