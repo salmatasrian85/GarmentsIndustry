@@ -9,27 +9,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #336699;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.RequestForLeaveController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #336699;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.WorkerRequestForLeaveController">
    <children>
       <Label layoutX="250.0" prefHeight="59.0" prefWidth="206.0" style="-fx-background-color: #336699;" text="Request For Leave" textFill="WHITE">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="164.0" layoutY="85.0" prefHeight="18.0" prefWidth="68.0" text="Name" textFill="WHITE">
+      <Label layoutX="150.0" layoutY="84.0" prefHeight="18.0" prefWidth="68.0" text="Name" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="164.0" layoutY="119.0" prefHeight="22.0" prefWidth="95.0" text="Employee Id" textFill="WHITE">
+      <Label layoutX="150.0" layoutY="119.0" prefHeight="22.0" prefWidth="95.0" text="Employee Id" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
       <TextField fx:id="nameTextField" layoutX="277.0" layoutY="82.0" prefHeight="26.0" prefWidth="206.0" />
       <TextField fx:id="ageTextField" layoutX="277.0" layoutY="117.0" prefHeight="26.0" prefWidth="206.0" />
-      <Button layoutX="329.0" layoutY="297.0" mnemonicParsing="false" onAction="#saveOnClick" prefHeight="26.0" prefWidth="68.0" text="Save" />
-      <AnchorPane blendMode="SCREEN" prefHeight="500.0" prefWidth="159.0">
+      <Button layoutX="329.0" layoutY="297.0" mnemonicParsing="false" onAction="#requestButtonOA" prefHeight="26.0" prefWidth="68.0" text="Request" />
+      <AnchorPane blendMode="SCREEN" prefHeight="512.0" prefWidth="95.0">
          <children>
             <Label alignment="CENTER" layoutX="-5.0" layoutY="-3.0" prefHeight="506.0" prefWidth="128.0" style="-fx-background-color: #336699;" text="Worker" textFill="WHITE">
                <font>
@@ -37,11 +37,6 @@
                </font>
             </Label>
             <Button layoutX="-5.0" layoutY="465.0" mnemonicParsing="false" onAction="#backToWrokerDashButtonOA" prefHeight="46.0" prefWidth="128.0" text="Back to Worker Dashboard" wrapText="true" />
-            <Label layoutX="152.0" layoutY="256.0" prefHeight="22.0" prefWidth="95.0" text="To" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
          </children>
          <cursor>
             <Cursor fx:constant="W_RESIZE" />
@@ -61,6 +56,11 @@
       <DatePicker fx:id="leavestartDateDP" layoutX="275.0" layoutY="208.0" prefHeight="26.0" prefWidth="198.0" />
       <DatePicker fx:id="leaveEndDateDP" layoutX="275.0" layoutY="261.0" prefHeight="26.0" prefWidth="198.0" />
       <Label layoutX="150.0" layoutY="210.0" prefHeight="22.0" prefWidth="95.0" text="From" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="263.0" prefHeight="22.0" prefWidth="44.0" text="To" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>

@@ -3,22 +3,20 @@ package mainpkg.garmentsindustry;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class WorkerMyProfileController
+public class WorkerRequestForLeaveController
 {
-    @javafx.fxml.FXML
-    private TextField phoneNumberTextField;
-    @javafx.fxml.FXML
-    private TextField addressTextField;
     @javafx.fxml.FXML
     private TextField nameTextField;
     @javafx.fxml.FXML
-    private ComboBox genderComboBox;
+    private DatePicker leaveEndDateDP;
+    @javafx.fxml.FXML
+    private DatePicker leavestartDateDP;
     @javafx.fxml.FXML
     private TextField ageTextField;
 
@@ -39,7 +37,11 @@ public class WorkerMyProfileController
         stage.show();
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void saveOnClick(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void requestButtonOA(ActionEvent actionEvent) {
     }
 }

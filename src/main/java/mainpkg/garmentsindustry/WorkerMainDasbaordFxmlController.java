@@ -14,7 +14,16 @@ public class WorkerMainDasbaordFxmlController
     }
 
     @javafx.fxml.FXML
-    public void NominateForAwardButtonOA(ActionEvent actionEvent) {
+    public void NominateForAwardButtonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WorkerNomnationFxml.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("Worker Nomination");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -26,7 +35,16 @@ public class WorkerMainDasbaordFxmlController
     }
 
     @javafx.fxml.FXML
-    public void backtoAllUsersButtonOA(ActionEvent actionEvent) {
+    public void backtoAllUsersButtonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AllUsersFxml.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("All user");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -48,7 +66,7 @@ public class WorkerMainDasbaordFxmlController
 
         Stage stage = new Stage();
 
-        stage.setTitle("WorkerMainDasbaord");
+        stage.setTitle("Worker Leave of absence");
 
         stage.setScene(scene);
         stage.show();
@@ -61,7 +79,7 @@ public class WorkerMainDasbaordFxmlController
 
         Stage stage = new Stage();
 
-        stage.setTitle("WorkerMainDasbaord");
+        stage.setTitle("Worker My profile");
 
         stage.setScene(scene);
         stage.show();

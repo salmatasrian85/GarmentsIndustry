@@ -3,24 +3,33 @@ package mainpkg.garmentsindustry;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class WorkerMyProfileController
+public class WorkerNominationController
 {
-    @javafx.fxml.FXML
-    private TextField phoneNumberTextField;
-    @javafx.fxml.FXML
-    private TextField addressTextField;
     @javafx.fxml.FXML
     private TextField nameTextField;
     @javafx.fxml.FXML
-    private ComboBox genderComboBox;
+    private ComboBox<String> awardcategoryCombo;
     @javafx.fxml.FXML
-    private TextField ageTextField;
+    private TextField employeeIDTF;
+    @javafx.fxml.FXML
+    private TableColumn nameTC;
+    @javafx.fxml.FXML
+    private TableView <Nominate>nominateTV;
+    @javafx.fxml.FXML
+    private TableColumn EmpIdTC;
+    @javafx.fxml.FXML
+    private TableColumn resonforNominateTC;
+    @javafx.fxml.FXML
+    private TableColumn awardCataegoryTC;
+    @javafx.fxml.FXML
+    private ComboBox <String> awardcategoryComboFilter;
+    @javafx.fxml.FXML
+    private TextArea nominationReasonTextarea;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -41,5 +50,13 @@ public class WorkerMyProfileController
 
     @javafx.fxml.FXML
     public void saveOnClick(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void submitbuttonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void NominatebuttonOA(ActionEvent actionEvent) {
     }
 }
