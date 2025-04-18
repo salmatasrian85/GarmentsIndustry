@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class WorkerNominationController
 {
@@ -101,9 +102,27 @@ public class WorkerNominationController
             nominateArrayList.add(nominate);
             ErrorL.setText("Nominated Succesfullly");
             nominateTV.getItems().add(nominate);
+            nameTextField.clear();
+            WorkerIDTF.clear();
+            awardcategoryCombo.setValue("");
+            nominationReasonTextarea.setText("");
         }
 
 
+    }
+
+    @javafx.fxml.FXML
+    public void filterButtonOA(ActionEvent actionEvent) {
+        nominateTV.getItems().clear();
+        String awardCategory = awardcategoryComboFilter.getValue();
+
+        for (Nominate nominate :nominateArrayList){
+            if (Objects.equals(nominate.getAwardCategory(),awardCategory)){
+                nominateTV.getItems().add(nominate);
+
+            }
+
+        }
     }
 
 }

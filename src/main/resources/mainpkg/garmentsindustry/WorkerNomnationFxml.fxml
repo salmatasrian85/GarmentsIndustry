@@ -57,7 +57,7 @@
          </font>
       </Label>
       <ComboBox fx:id="awardcategoryComboFilter" layoutX="134.0" layoutY="299.0" prefHeight="22.0" prefWidth="140.0" promptText="Filter by category" />
-      <Button layoutX="280.0" layoutY="299.0" mnemonicParsing="false" onAction="#saveOnClick" prefHeight="22.0" prefWidth="54.0" text="Filter" />
+      <Button layoutX="280.0" layoutY="299.0" mnemonicParsing="false" onAction="#filterButtonOA" prefHeight="22.0" prefWidth="54.0" text="Filter" />
       <Label fx:id="ErrorL" layoutX="502.0" layoutY="271.0" prefHeight="20.0" prefWidth="152.0" textFill="#e4adad">
          <font>
             <Font size="14.0" />
