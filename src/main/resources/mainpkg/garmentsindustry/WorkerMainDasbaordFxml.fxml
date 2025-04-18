@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane prefHeight="400.0" prefWidth="594.0" style="-fx-background-color: #336699;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.WorkerMainDasbaordFxmlController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="224.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#myProfileButtonOA" prefHeight="50.0" prefWidth="200.0" text="My Profile" />
+            <Button mnemonicParsing="false" onAction="#RegisterforTrainingProgramButtonOA" prefHeight="50.0" prefWidth="200.0" text="Register for Training Program" />
+            <Button mnemonicParsing="false" onAction="#RegForHealthProgramButtonOA" prefHeight="50.0" prefWidth="200.0" text="Register for Health Program" />
+            <Button mnemonicParsing="false" onAction="#RequestForLeaveOA" prefHeight="50.0" prefWidth="200.0" text="Request for leave of Absence" />
+            <Button mnemonicParsing="false" onAction="#NominateForAwardButtonOA" prefHeight="50.0" prefWidth="200.0" text="Nominate for Award" />
+            <Button mnemonicParsing="false" onAction="#ReqShiftChangeButtonOA" prefHeight="50.0" prefWidth="200.0" text="Request Shift Change" />
+            <Button mnemonicParsing="false" onAction="#ApplyForFinancialAidButtonOA" prefHeight="50.0" prefWidth="200.0" text="Apply For FInancial Aid" />
+            <Button mnemonicParsing="false" onAction="#ReportSafetyIssueButtonOA" prefHeight="50.0" prefWidth="200.0" text="Report Safety Issue" />
+         </children>
+      </VBox>
+      <Label layoutX="281.0" layoutY="20.0" prefHeight="35.0" prefWidth="250.0" text="Worker Dashboard" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="506.0" layoutY="360.0" mnemonicParsing="false" onAction="#backtoAllUsersButtonOA" text="back to All Users" />
+   </children>
 </AnchorPane>

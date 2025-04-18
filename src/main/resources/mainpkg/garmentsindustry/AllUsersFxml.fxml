@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #336699;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.AllUsersFxmlController">
+   <children>
+      <VBox layoutX="99.0" layoutY="49.0" prefHeight="308.0" prefWidth="134.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#workerbuttonOA" prefHeight="200.0" prefWidth="200.0" text="Buyer" />
+            <Button mnemonicParsing="false" onAction="#generalMemberbuttonOA" prefHeight="200.0" prefWidth="200.0" text="Manage Product Listings" />
+            <Button mnemonicParsing="false" onAction="#workerbuttonOA" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: skyblue;" text="Worker" />
+            <Button mnemonicParsing="false" onAction="#generalMemberbuttonOA" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: pink;" text="General Member" />
+            <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="HR" />
+            <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Admin" />
+            <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="HR" />
+            <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="HR" />
+         </children>
+      </VBox>
+      <Label layoutX="125.0" layoutY="14.0" text="Users" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="399.0" layoutY="66.0" text="LOG IN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="EmailTF" layoutX="366.0" layoutY="111.0" promptText="Email" />
+      <TextField fx:id="PasswordTF" layoutX="366.0" layoutY="151.0" promptText="Password" />
+      <Button layoutX="408.0" layoutY="190.0" mnemonicParsing="false" onAction="#loginButoonOA" text="Login" />
+      <Button layoutX="473.0" layoutY="344.0" mnemonicParsing="false" onAction="#CreateButtonOA" text="Create Account" />
+   </children>
 </AnchorPane>
