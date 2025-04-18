@@ -42,7 +42,16 @@ public class WorkerMainDasbaordFxmlController
     }
 
     @javafx.fxml.FXML
-    public void RequestForLeaveOA(ActionEvent actionEvent) {
+    public void RequestForLeaveOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WorkerRequestForLeaveFxml.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("WorkerMainDasbaord");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
