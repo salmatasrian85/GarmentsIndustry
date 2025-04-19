@@ -1,47 +1,30 @@
 package mainpkg.garmentsindustry;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-
-import java.io.IOException;
+import javafx.scene.control.*;
 
 public class WorkerRequestForLeaveController
 {
     @javafx.fxml.FXML
-    private TextField nameTextField;
+    private DatePicker endDatePicker;
     @javafx.fxml.FXML
-    private DatePicker leaveEndDateDP;
+    private DatePicker startDatePicker;
     @javafx.fxml.FXML
-    private DatePicker leavestartDateDP;
+    private TextArea reasonArea;
     @javafx.fxml.FXML
-    private TextField ageTextField;
+    private TextField contactField;
+    @javafx.fxml.FXML
+    private ComboBox leaveTypeCombo;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void backToWrokerDashButtonOA(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WorkerMainDasbaordFxml.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-
-        Stage stage = new Stage();
-
-        stage.setTitle("WorkerMainDasbaord");
-
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @Deprecated
-    public void saveOnClick(ActionEvent actionEvent) {
+    public void uploadBtn(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void requestButtonOA(ActionEvent actionEvent) {
+    public void submitBtnOA(ActionEvent actionEvent) {
     }
 }

@@ -1,13 +1,9 @@
 package mainpkg.garmentsindustry;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -30,14 +26,13 @@ public class WorkerNominationController
     @javafx.fxml.FXML
     private TextArea nominationReasonTextarea;
     @javafx.fxml.FXML
-    private Label ErrorL;
-    @javafx.fxml.FXML
     private TableColumn WorkerIdTc;
     @javafx.fxml.FXML
     private TextField WorkerIDTF;
+    @javafx.fxml.FXML
+    private Label ErrorL;
 
     ArrayList<Nominate> nominateArrayList = new ArrayList<>();
-
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -51,68 +46,6 @@ public class WorkerNominationController
     }
 
     @javafx.fxml.FXML
-    public void backToWrokerDashButtonOA(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WorkerMainDasbaordFxml.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-
-        Stage stage = new Stage();
-
-        stage.setTitle("WorkerMainDasbaord");
-
-        stage.setScene(scene);
-        stage.show();
-    }
-
-
-    @javafx.fxml.FXML
-    public void NominatebuttonOA(ActionEvent actionEvent) {
-        String workerName = "";
-        int workeId = 0;
-        String awardCategory = "";
-        String reason = "" ;
-
-        boolean flag = true;
-
-        if (nameTextField.getText().isEmpty()){
-            flag= false;
-            ErrorL.setText(("Name text is empty"));
-        }
-        else {
-            workerName = nameTextField.getText();
-        }
-        if (WorkerIDTF.getText().isEmpty()){
-            flag= false;
-            ErrorL.setText(("ID text is empty"));
-        }
-        else {
-            workeId = Integer.parseInt(WorkerIDTF.getText());
-
-        }
-        if (awardcategoryCombo.getValue() == null){
-            flag= false;
-            ErrorL.setText(("award text is empty"));
-        }
-        else {
-            awardCategory = awardcategoryCombo.getValue();
-        }
-        reason = nominationReasonTextarea.getText();
-
-        if (flag){
-            Nominate nominate = new Nominate(workerName,workeId,awardCategory,reason);
-            nominateArrayList.add(nominate);
-            ErrorL.setText("Nominated Succesfullly");
-            nameTextField.clear();
-            WorkerIDTF.clear();
-            awardcategoryCombo.setValue("");
-            nominationReasonTextarea.setText("");
-            nominateTV.getItems().clear();
-            nominateTV.getItems().addAll(nominateArrayList);
-                }
-
-
-    }
-
-    @javafx.fxml.FXML
     public void filterButtonOA(ActionEvent actionEvent) {
         nominateTV.getItems().clear();
         String awardCategory = awardcategoryComboFilter.getValue();
@@ -120,10 +53,65 @@ public class WorkerNominationController
         for (Nominate nominate :nominateArrayList){
             if (Objects.equals(nominate.getAwardCategory(),awardCategory)){
                 nominateTV.getItems().add(nominate);
-
             }
-
         }
+
+
+
     }
 
+    @javafx.fxml.FXML
+    public void NominatebuttonOA(ActionEvent actionEvent) {
+        String workerName = "" , awardCategory = "", reason = "", error = "";
+        int workeId = 0;
+
+        boolean flag = true;
+
+        if (nameTextField.getText().isEmpty()){
+            flag= false;
+            error += "Name text is empty\n";
+        }
+        else {
+            workerName = nameTextField.getText();
+        }
+
+        if (WorkerIDTF.getText().isEmpty()) {
+            flag = false;
+            error += "ID is empty\n";
+        } else {
+            // number check for int id
+            try {
+                workeId = Integer.parseInt(WorkerIDTF.getText());
+            } catch (NumberFormatException e) {
+                error += "ID must be a number\n";
+                flag = false;
+            }
+        }
+
+        if (awardcategoryCombo.getValue() == null){
+            flag= false;
+            error += "award is empty\n";
+        }
+        else {
+            awardCategory = awardcategoryCombo.getValue();
+        }
+        reason = nominationReasonTextarea.getText();
+
+        ErrorL.setText(error); // all errors are set here
+
+        if (flag){
+            ErrorL.setText("Nominated Succcessfully");
+
+            Nominate nominate = new Nominate(workerName,workeId,awardCategory,reason);
+            nominateArrayList.add(nominate);
+            nameTextField.clear();
+            WorkerIDTF.clear();
+            awardcategoryCombo.setValue("");
+            nominationReasonTextarea.setText("");
+            nominateTV.getItems().clear();
+            nominateTV.getItems().addAll(nominateArrayList);
+
+        }
+
+    }
 }

@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class WorkerMyProfileController
@@ -20,6 +19,10 @@ public class WorkerMyProfileController
     @FXML
     private TextField ageTextField;
     @FXML
+    private Label OutputLabel;
+    @FXML
+    private Label popupL;
+    @FXML
     private ToggleGroup genderToggleGroup;
     @FXML
     private RadioButton otherRadoButtton;
@@ -27,10 +30,6 @@ public class WorkerMyProfileController
     private RadioButton maleRadioButton;
     @FXML
     private RadioButton FemaleRadioButton;
-    @FXML
-    private Label OutputLabel;
-    @FXML
-    private Label popupL;
 
     @FXML
     public void initialize() {
@@ -55,7 +54,7 @@ public class WorkerMyProfileController
         String workerName = nameTextField.getText();
         int age= Integer.parseInt(ageTextField.getText());
 
-        int phoneNumber= Integer.parseInt(ageTextField.getText() );
+        int phoneNumber= Integer.parseInt(phoneNumberTextField.getText() );
         String address =addressTextField.getText();
         String gender = "";
          if(maleRadioButton.isSelected()){

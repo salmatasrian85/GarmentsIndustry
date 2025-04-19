@@ -6,74 +6,92 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #336699;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.WorkerMyProfileController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #336699;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.WorkerMyProfileController">
    <children>
-      <Label alignment="CENTER" layoutX="26.0" prefHeight="59.0" prefWidth="600.0" text="My Profile" textFill="WHITE">
+      <Label layoutX="0.0" layoutY="0.0" prefHeight="80.0" prefWidth="800.0" style="-fx-background-color: #2c3e50; -fx-alignment: CENTER;" text="Bangladesh Garment Workers Welfare Association" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="23.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="197.0" layoutY="63.0" prefHeight="18.0" prefWidth="68.0" text="Name" textFill="#fff8f8">
+      <Label layoutX="0.0" layoutY="80.0" prefHeight="40.0" prefWidth="800.0" style="-fx-background-color: #2c3e50; -fx-alignment: CENTER;" text="Worker Profile" textFill="#ecf0f1">
          <font>
-            <Font size="15.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="197.0" layoutY="109.0" prefHeight="18.0" prefWidth="68.0" text="Age" textFill="#fff8f8">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="196.0" layoutY="263.0" prefHeight="18.0" prefWidth="68.0" text="Address" textFill="#fff8f8">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="197.0" layoutY="216.0" prefHeight="22.0" prefWidth="117.0" text="Phone Number" textFill="#fff8f8">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField fx:id="nameTextField" layoutX="323.0" layoutY="61.0" prefHeight="26.0" prefWidth="206.0" />
-      <TextField fx:id="ageTextField" layoutX="322.0" layoutY="107.0" prefHeight="26.0" prefWidth="206.0" />
-      <TextField fx:id="addressTextField" layoutX="322.0" layoutY="261.0" prefHeight="26.0" prefWidth="206.0" />
-      <TextField fx:id="phoneNumberTextField" layoutX="323.0" layoutY="216.0" prefHeight="26.0" prefWidth="206.0" />
-      <Button layoutX="372.0" layoutY="300.0" mnemonicParsing="false" onAction="#saveButtonOA" prefHeight="26.0" prefWidth="68.0" text="Save" />
-      <Label layoutX="197.0" layoutY="165.0" prefHeight="18.0" prefWidth="68.0" text="Gender" textFill="#fff8f8">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Button layoutX="429.0" layoutY="475.0" mnemonicParsing="false" onAction="#backToWrokerDashButtonOA" prefHeight="26.0" prefWidth="178.0" text="Back to Worker Dashboard" />
-      <Label alignment="CENTER" blendMode="SCREEN" layoutX="-6.0" prefHeight="516.0" prefWidth="128.0" style="-fx-background-color: #336699;" text="Worker" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="23.0" />
-         </font>
-      </Label>
-      <RadioButton fx:id="maleRadioButton" layoutX="322.0" layoutY="167.0" mnemonicParsing="false" text="Male" textFill="WHITE">
-         <font>
-            <Font size="15.0" />
-         </font>
-         <toggleGroup>
-            <ToggleGroup fx:id="genderToggleGroup" />
-         </toggleGroup>
-      </RadioButton>
-      <RadioButton fx:id="FemaleRadioButton" layoutX="396.0" layoutY="167.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$genderToggleGroup">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </RadioButton>
-      <RadioButton fx:id="otherRadoButtton" layoutX="478.0" layoutY="167.0" mnemonicParsing="false" text="Other" textFill="WHITE" toggleGroup="$genderToggleGroup">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </RadioButton>
-      <Label fx:id="OutputLabel" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="167.0" layoutY="342.0" prefHeight="134.0" prefWidth="447.0" text="OutputLabel" textFill="#fcffff">
-         <font>
-            <Font name="System Bold Italic" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="popupL" layoutX="324.0" layoutY="326.0" prefHeight="18.0" prefWidth="163.0" textFill="#0ed952" />
+      <AnchorPane layoutX="150.0" layoutY="140.0" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="20.0" layoutY="20.0" text="My Profile" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="70.0" text="Name:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameTextField" layoutX="180.0" layoutY="65.0" prefWidth="250.0" />
+            <Label layoutX="50.0" layoutY="110.0" text="Age:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ageTextField" layoutX="180.0" layoutY="105.0" prefWidth="250.0" />
+            <Label layoutX="50.0" layoutY="150.0" text="Gender:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <HBox layoutX="180.0" layoutY="145.0" spacing="15.0">
+               <children>
+                  <RadioButton fx:id="maleRadioButton" mnemonicParsing="false" text="Male" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderToggleGroup" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="FemaleRadioButton" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$genderToggleGroup">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="otherRadoButtton" mnemonicParsing="false" text="Other" textFill="WHITE" toggleGroup="$genderToggleGroup">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <Label layoutX="50.0" layoutY="190.0" text="Phone Number:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phoneNumberTextField" layoutX="180.0" layoutY="185.0" prefWidth="250.0" />
+            <Label layoutX="50.0" layoutY="230.0" text="Address:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addressTextField" layoutX="180.0" layoutY="225.0" prefWidth="250.0" />
+            <Button layoutX="180.0" layoutY="270.0" mnemonicParsing="false" onAction="#saveButtonOA" prefWidth="100.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Save" />
+            <Label fx:id="popupL" layoutX="107.0" layoutY="305.0" prefWidth="250.0" textFill="#0ed952">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="OutputLabel" layoutX="50.0" layoutY="310.0" prefHeight="138.0" prefWidth="400.0" text="OutputLabel" textFill="#fcffff" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="655.0" layoutY="514.0" mnemonicParsing="false" onAction="#backToWrokerDashButtonOA" prefWidth="130.0" style="-fx-background-color: gray;" text="Back to Dashboard" />
    </children>
 </AnchorPane>
