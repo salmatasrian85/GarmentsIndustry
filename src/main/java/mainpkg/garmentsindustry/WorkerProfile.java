@@ -57,12 +57,11 @@ public class WorkerProfile {
 
     @Override
     public String toString() {
-        return "WorkerProfile{" +
-                "WorkerName='" + WorkerName + '\'' +
-                ", Age=" + Age +
-                ", Gender='" + Gender + '\'' +
-                ", PhoneNumber=" + PhoneNumber +
-                ", Address='" + Address + '\'' +
-                '}';
+        return "Worker Details:\n" +
+                "WorkerName = '" + WorkerName + "'\n" +
+                "Age = " + Age + "\n" +
+                "Gender = '" + Gender + "'\n" +
+                "PhoneNumber = " + PhoneNumber + "\n" +
+                "Address = '" + Address + "'";
     }
 }

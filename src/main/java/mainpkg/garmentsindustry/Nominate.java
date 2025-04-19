@@ -1,21 +1,10 @@
 package mainpkg.garmentsindustry;
 
 public class Nominate {
-    String workerName;
-    int workeId;
-    String awardCategory;
-    String reason;
-
-
-    @Override
-    public String toString() {
-        return "Nominate{" +
-                "workerName='" + workerName + '\'' +
-                ", workeId=" + workeId +
-                ", awardCategory='" + awardCategory + '\'' +
-                ", reason='" + reason + '\'' +
-                '}';
-    }
+    private String workerName;
+    private int workeId;
+    private String awardCategory;
+    private String reason;
 
     public Nominate(String workerName, int workeId, String awardCategory, String reason) {
         this.workerName = workerName;
@@ -40,7 +29,6 @@ public class Nominate {
         this.workeId = workeId;
     }
 
-
     public String getAwardCategory() {
         return awardCategory;
     }
@@ -55,5 +43,15 @@ public class Nominate {
 
     public void setReason(String reason) {
         this.reason = reason;
+    }
+
+    @Override
+    public String toString() {
+        return "Nominate{" +
+                "workerName='" + workerName + '\'' +
+                ", workeId=" + workeId +
+                ", awardCategory='" + awardCategory + '\'' +
+                ", reason='" + reason + '\'' +
+                '}';
     }
 }

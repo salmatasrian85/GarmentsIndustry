@@ -1,32 +1,42 @@
 package mainpkg.garmentsindustry;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class WorkerMyProfileController
 {
-    @javafx.fxml.FXML
+    @FXML
     private TextField phoneNumberTextField;
-    @javafx.fxml.FXML
+    @FXML
     private TextField addressTextField;
-    @javafx.fxml.FXML
+    @FXML
     private TextField nameTextField;
-    @javafx.fxml.FXML
-    private ComboBox genderComboBox;
-    @javafx.fxml.FXML
+    @FXML
     private TextField ageTextField;
+    @FXML
+    private ToggleGroup genderToggleGroup;
+    @FXML
+    private RadioButton otherRadoButtton;
+    @FXML
+    private RadioButton maleRadioButton;
+    @FXML
+    private RadioButton FemaleRadioButton;
+    @FXML
+    private Label OutputLabel;
+    @FXML
+    private Label popupL;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void backToWrokerDashButtonOA(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WorkerMainDasbaordFxml.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
@@ -39,7 +49,27 @@ public class WorkerMyProfileController
         stage.show();
     }
 
-    @javafx.fxml.FXML
-    public void saveOnClick(ActionEvent actionEvent) {
+
+    @FXML
+    public void saveButtonOA(ActionEvent actionEvent) {
+        String workerName = nameTextField.getText();
+        int age= Integer.parseInt(ageTextField.getText());
+
+        int phoneNumber= Integer.parseInt(ageTextField.getText() );
+        String address =addressTextField.getText();
+        String gender = "";
+         if(maleRadioButton.isSelected()){
+             gender = maleRadioButton.getText();
+         } else if (FemaleRadioButton.isSelected()) {
+             gender = FemaleRadioButton.getText();
+        }else if (otherRadoButtton.isSelected()) {
+             gender = otherRadoButtton.getText();
+         }
+        popupL.setText("Saved Successfullly");
+         WorkerProfile workerProfile = new WorkerProfile(workerName,age,gender,phoneNumber,address);
+         OutputLabel.setText(workerProfile.toString());
+
+
+
     }
 }

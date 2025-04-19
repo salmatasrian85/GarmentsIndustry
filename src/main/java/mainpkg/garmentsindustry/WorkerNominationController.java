@@ -101,12 +101,13 @@ public class WorkerNominationController
             Nominate nominate = new Nominate(workerName,workeId,awardCategory,reason);
             nominateArrayList.add(nominate);
             ErrorL.setText("Nominated Succesfullly");
-            nominateTV.getItems().add(nominate);
             nameTextField.clear();
             WorkerIDTF.clear();
             awardcategoryCombo.setValue("");
             nominationReasonTextarea.setText("");
-        }
+            nominateTV.getItems().clear();
+            nominateTV.getItems().addAll(nominateArrayList);
+                }
 
 
     }
