@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="mainpkg.garmentsindustry.saad.User1goal2"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.saad.User1goal2Controller">
+   <children>
+      <Label layoutX="185.0" layoutY="26.0" prefHeight="35.0" prefWidth="331.0" text="Submit Employee Complaint">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="93.0" text=" Select Employee" />
+      <TableView layoutX="33.0" layoutY="350.0" prefHeight="200.0" prefWidth="636.0">
+        <columns>
+          <TableColumn fx:id="SelectEmployeeTC" prefWidth="119.0" text="Select Employee" />
+          <TableColumn fx:id="ComplaintTypeTC" prefWidth="187.0" text=" Complaint Type" />
+            <TableColumn fx:id="ComplaintTitleTC" prefWidth="158.0" text="Complaint Title" />
+            <TableColumn fx:id="ComplaintDescriptionTC" prefWidth="171.0" text="Complaint Description" />
+        </columns>
+      </TableView>
+      <Label layoutX="66.0" layoutY="137.0" />
+      <Label layoutX="66.0" layoutY="178.0" text="Complaint Title" />
+      <ComboBox fx:id="SelectEmployeeCB" layoutX="185.0" layoutY="89.0" prefWidth="150.0" />
+      <ComboBox fx:id="ComplaintTypeCB" layoutX="185.0" layoutY="133.0" prefWidth="150.0" />
+      <Label layoutX="59.0" layoutY="137.0" text=" Complaint Type" />
+      <TextField fx:id="ComplaintTitletextfield" layoutX="186.0" layoutY="174.0" />
+      <Label layoutX="66.0" layoutY="223.0" text="Complaint Description" />
+      <TextField fx:id="ComplaintDescriptiontextfield" layoutX="186.0" layoutY="219.0" />
+      <Button layoutX="201.0" layoutY="288.0" mnemonicParsing="false" onAction="#SubmitComplaintonactionbutton" prefHeight="25.0" prefWidth="119.0" text="Submit Complaint" />
+      <Button layoutX="489.0" layoutY="89.0" mnemonicParsing="false" onAction="#BacktoDashboardonactionbutton" prefHeight="25.0" prefWidth="119.0" text="Back to Dashboard" />
+   </children>
 </AnchorPane>
