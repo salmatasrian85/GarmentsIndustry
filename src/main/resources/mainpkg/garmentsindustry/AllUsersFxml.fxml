@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #336699;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.AllUsersFxmlController">
    <children>
-      <VBox layoutX="80.0" layoutY="113.0" prefHeight="298.0" prefWidth="204.0" spacing="15.0">
+      <VBox layoutX="80.0" layoutY="113.0" prefHeight="338.0" prefWidth="206.0" spacing="15.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="196.0" text="Select User Type" textFill="WHITE">
                <font>
@@ -24,11 +24,30 @@
                   <Insets bottom="10.0" />
                </padding>
             </Label>
-            <Button mnemonicParsing="false" onAction="#workerbuttonOA" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: skyblue;" text="Worker" />
-            <Button mnemonicParsing="false" onAction="#generalMemberbuttonOA" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: pink;" text="General Member" />
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightgreen;" text="HR" />
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: orange;" text="Admin" />
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: lightgray;" text="Buyer" />
+            <Button mnemonicParsing="false" onAction="#workerbuttonOA" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: skyblue;" text="Worker">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#generalMemberbuttonOA" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #c8add8;" text="General Member">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: lightgray;" text="Buyer">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #9f795e;" text="Manage Product Listings">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #e1c0a4;" text="Admin">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightgreen;" text="HR">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
          </children>
       </VBox>
       <VBox alignment="TOP_CENTER" layoutX="383.0" layoutY="165.0" prefWidth="300.0" spacing="20.0" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 10; -fx-padding: 20;">
