@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.saad.User1goal1controller">
+   <children>
+      <Label layoutX="74.0" layoutY="86.0" text="Full Name" />
+      <TextField fx:id="FullNametextfield" layoutX="155.0" layoutY="82.0" text="Sadd Khan" />
+      <Label layoutX="194.0" layoutY="14.0" text="Register New Employee Form">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="139.0" text="Employee ID" />
+      <TextField fx:id="EmployeeIDtextfield" layoutX="155.0" layoutY="135.0" text="EMP2025001" />
+      <Label layoutX="57.0" layoutY="203.0" text="Contact Number" />
+      <TextField fx:id="ContactNumbertextfield" layoutX="155.0" layoutY="199.0" text="017XXXXXXXX" />
+      <Label layoutX="361.0" layoutY="86.0" text="Department" />
+      <ComboBox fx:id="Departmentcombobox" layoutX="443.0" layoutY="82.0" prefWidth="150.0" promptText="select Dep" />
+      <Label layoutX="361.0" layoutY="139.0" text="Date of Joining" />
+      <DatePicker fx:id="DOJdatepicker" layoutX="449.0" layoutY="135.0" />
+      <Label layoutX="57.0" layoutY="259.0" text="Email Address " />
+      <TextField fx:id="EmailAddresstextfield" layoutX="155.0" layoutY="255.0" text="rahim@example.com" />
+      <Label layoutX="361.0" layoutY="195.0" text="Address" />
+      <TextField fx:id="Addresstextfield" layoutX="436.0" layoutY="191.0" prefHeight="56.0" prefWidth="200.0" promptText="House 12, Dhaka" />
+      <Button layoutX="358.0" layoutY="268.0" mnemonicParsing="false" onAction="#Submitonactionbutton" prefHeight="25.0" prefWidth="121.0" text="Submit" />
+      <Button layoutX="492.0" layoutY="268.0" mnemonicParsing="false" onAction="#Cancelonactionbutton" prefHeight="25.0" prefWidth="121.0" text="Cancel" />
+      <TableView layoutX="10.0" layoutY="318.0" prefHeight="200.0" prefWidth="672.0">
+        <columns>
+          <TableColumn fx:id="FullNametablecolumn" prefWidth="75.0" text="Full Name" />
+          <TableColumn fx:id="EmployeeIDtablecolumn" prefWidth="78.0" text="Employee ID" />
+            <TableColumn fx:id="ContactNumbertablecolunm" prefWidth="102.0" text="Contact Number" />
+            <TableColumn fx:id="EmailAddresstablecolumn" prefWidth="94.0" text="Email Address " />
+            <TableColumn fx:id="Departmenttablecolumn" prefWidth="79.0" text="Department" />
+            <TableColumn fx:id="DOJtablecolumn" prefWidth="93.0" text="Date of Joining" />
+            <TableColumn fx:id="Addresstablecolumn" prefWidth="142.0" text="Address" />
+        </columns>
+      </TableView>
+      <Label fx:id="Errorlabel" layoutX="166.0" layoutY="540.0" prefHeight="17.0" prefWidth="333.0" text="Error:" textAlignment="CENTER" textFill="#b91212" wrapText="true" />
+   </children>
+</AnchorPane>
