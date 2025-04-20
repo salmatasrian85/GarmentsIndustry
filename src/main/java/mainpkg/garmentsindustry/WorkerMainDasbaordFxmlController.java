@@ -48,7 +48,16 @@ public class WorkerMainDasbaordFxmlController
     }
 
     @javafx.fxml.FXML
-    public void ApplyForFinancialAidButtonOA(ActionEvent actionEvent) {
+    public void ApplyForFinancialAidButtonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WorkerFinancialAidFxml.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("Worker Financial Aid");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML

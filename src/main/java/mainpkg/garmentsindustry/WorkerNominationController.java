@@ -26,7 +26,7 @@ public class WorkerNominationController
     @javafx.fxml.FXML
     private TextArea nominationReasonTextarea;
     @javafx.fxml.FXML
-    private TableColumn WorkerIdTc;
+    private TableColumn <Nominate, Integer> WorkerIdTc;
     @javafx.fxml.FXML
     private TextField WorkerIDTF;
     @javafx.fxml.FXML
@@ -90,7 +90,7 @@ public class WorkerNominationController
 
         if (awardcategoryCombo.getValue() == null){
             flag= false;
-            error += "award is empty\n";
+            error += "Please choose the award category!\n";
         }
         else {
             awardCategory = awardcategoryCombo.getValue();
@@ -104,11 +104,13 @@ public class WorkerNominationController
 
             Nominate nominate = new Nominate(workerName,workeId,awardCategory,reason);
             nominateArrayList.add(nominate);
-            nameTextField.clear();
+
+
             WorkerIDTF.clear();
             awardcategoryCombo.setValue("");
             nominationReasonTextarea.setText("");
             nominateTV.getItems().clear();
+            nameTextField.clear();
             nominateTV.getItems().addAll(nominateArrayList);
 
         }

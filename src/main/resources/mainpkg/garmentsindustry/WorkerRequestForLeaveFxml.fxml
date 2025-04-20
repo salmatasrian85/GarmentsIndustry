@@ -14,10 +14,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.WorkerRequestForLeaveController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="814.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.WorkerRequestForLeaveController">
    <children>
-      <VBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="91.0" prefWidth="864.0" style="-fx-background-color: #2c3e50;">
+      <VBox alignment="CENTER" layoutX="-8.0" layoutY="-8.0" prefHeight="91.0" prefWidth="829.0" style="-fx-background-color: #2c3e50;">
          <children>
             <Label style="-fx-text-fill: white; -fx-font-weight: bold;" text="Bangladesh Garment Workers Welfare Association" textAlignment="CENTER" underline="true">
                <font>
@@ -31,7 +30,7 @@
             </Label>
          </children>
       </VBox>
-      <VBox alignment="TOP_CENTER" layoutX="117.0" layoutY="126.0" prefHeight="400.0" prefWidth="659.0" spacing="15.0">
+      <VBox alignment="TOP_CENTER" layoutX="69.0" layoutY="107.0" prefHeight="400.0" prefWidth="659.0" spacing="15.0">
          <children>
             <GridPane hgap="10.0" prefHeight="346.0" prefWidth="815.0" vgap="10.0">
                <columnConstraints>
@@ -72,5 +71,6 @@
             </HBox>
          </children>
       </VBox>
+      <Label layoutX="70.0" layoutY="515.0" prefHeight="138.0" prefWidth="702.0" text="Label" />
    </children>
 </AnchorPane>

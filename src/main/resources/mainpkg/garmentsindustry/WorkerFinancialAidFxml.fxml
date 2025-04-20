@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -8,80 +9,51 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #336699;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.WorkerFinancialAidController">
+<AnchorPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.WorkerFinancialAidController">
    <children>
-      <AnchorPane blendMode="DARKEN" layoutY="-3.0" prefHeight="66.0" prefWidth="800.0" style="-fx-background-color: white;">
+      <Label layoutX="0.0" layoutY="0.0" prefHeight="80.0" prefWidth="900.0" style="-fx-background-color: #2c3e50; -fx-alignment: CENTER;" text="Bangladesh Garment Workers Welfare Association" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutY="53.0" prefHeight="40.0" prefWidth="900.0" style="-fx-background-color: #2c3e50; -fx-alignment: CENTER;" text="Financial Aid Application" textFill="#ecf0f1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="51.0" layoutY="106.0" prefHeight="380.0" prefWidth="807.0" style="-fx-background-color: white;">
          <children>
-            <Label layoutY="-2.0" prefHeight="59.0" prefWidth="800.0" style="-fx-background-color: #2c3e50; -fx-alignment: CENTER;" text="Financial Aid Application" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Label>
+            <Label layoutX="56.0" layoutY="61.0" text="Amount" />
+            <TextField fx:id="AmountTF" layoutX="186.0" layoutY="56.0" prefWidth="300.0" promptText="Enter your Amount" />
+            <Label layoutX="56.0" layoutY="101.0" text="Aid Type" />
+            <ComboBox fx:id="aidTypeCombo" layoutX="186.0" layoutY="96.0" prefWidth="300.0" promptText="choose Aid Type" />
+            <Label layoutX="56.0" layoutY="141.0" text="Reason:" />
+            <TextArea fx:id="ReasonTextarea" layoutX="187.0" layoutY="138.0" prefHeight="80.0" prefWidth="293.0" promptText="Explain your financial need" />
+            <Label fx:id="ErrorL" layoutX="498.0" layoutY="110.0" prefHeight="238.0" prefWidth="300.0" text="ErrorL" />
+            <Label layoutX="56.0" layoutY="228.0" text="ID Proof:" />
+            <TextField fx:id="idProofTF" editable="false" layoutX="187.0" layoutY="229.0" prefHeight="26.0" prefWidth="229.0" promptText="upload your id" style="-fx-text-fill: #333333;" />
+            <Button layoutX="425.0" layoutY="229.0" onAction="#ProofUploadButtonOA" prefHeight="26.0" prefWidth="57.0" style="-fx-text-fill: #ffffff; -fx-background-color: #3498db;" text="Browse" />
+            <Label layoutX="54.0" layoutY="270.0" text="Salary Slip:" />
+            <TextField fx:id="SalarySlipTF" editable="false" layoutX="184.0" layoutY="269.0" prefHeight="26.0" prefWidth="230.0" promptText="upload your salary slip" style="-fx-text-fill: #333333;" />
+            <Button layoutX="423.0" layoutY="269.0" onAction="#SalaryUpButtonOA" prefHeight="26.0" prefWidth="57.0" style="-fx-text-fill: #ffffff; -fx-background-color: #3498db;" text="Browse" />
+            <CheckBox fx:id="acceptCB" layoutX="56.0" layoutY="316.0" mnemonicParsing="false" text="I accept the terms of the financial aid award (if applicable)." />
+            <Label layoutX="56.0" layoutY="19.0" text="Worker ID:" />
+            <TextField fx:id="WorkerIDTF" layoutX="186.0" layoutY="14.0" prefWidth="300.0" promptText="Enter Your ID" />
+            <Button layoutX="622.0" layoutY="14.0" mnemonicParsing="false" onAction="#previousApplicationsButtonOA" prefHeight="26.0" prefWidth="170.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="Show All Applications" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <Label alignment="CENTER" blendMode="COLOR_BURN" layoutY="-6.0" prefHeight="610.0" prefWidth="128.0" style="-fx-background-color: #336699;" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="23.0" />
-         </font>
-      </Label>
-      <Label layoutX="32.0" layoutY="79.0" style="-fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold;" text="Worker" />
-      <Button layoutX="4.0" layoutY="153.0" maxWidth="Infinity" onAction="#backToWorkerDashButton" prefHeight="27.0" prefWidth="120.0" style="-fx-text-fill: white; -fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 5;" text="Back to Dashboard" />
-      <Label layoutX="170.0" layoutY="68.0" prefHeight="18.0" prefWidth="120.0" text="Aid Type:" textFill="WHITE">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <ComboBox fx:id="aidTypeComboBox" layoutX="306.0" layoutY="66.0" prefHeight="26.0" prefWidth="206.0" />
-      <Label layoutX="170.0" layoutY="105.0" prefHeight="22.0" prefWidth="95.0" text="Amount:" textFill="WHITE">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField fx:id="amountTextField" layoutX="306.0" layoutY="103.0" prefHeight="26.0" prefWidth="206.0" />
-      <Label layoutX="170.0" layoutY="142.0" prefHeight="22.0" prefWidth="128.0" text="Reason:" textFill="WHITE">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextArea fx:id="reasonTextArea" layoutX="306.0" layoutY="140.0" prefHeight="78.0" prefWidth="335.0" promptText="Explain your financial need" />
-      <Label layoutX="170.0" layoutY="228.0" prefHeight="22.0" prefWidth="128.0" text="ID Proof:" textFill="WHITE">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <HBox layoutX="306.0" layoutY="228.0" spacing="10">
-         <children>
-            <TextField fx:id="idProofTextField" editable="false" prefHeight="26.0" prefWidth="180.0" />
-            <Button onAction="#ProofUploadButtonOA" text="Browse" />
-         </children>
-      </HBox>
-      <Label layoutX="170.0" layoutY="264.0" prefHeight="22.0" prefWidth="128.0" text="Salary Slip:" textFill="WHITE">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <HBox layoutX="306.0" layoutY="264.0" spacing="10">
-         <children>
-            <TextField fx:id="salarySlipTextField" editable="false" prefHeight="26.0" prefWidth="180.0" />
-            <Button onAction="#SalarySlipUploadButtonOA" text="Browse" />
-         </children>
-      </HBox>
-      <Button layoutX="391.0" layoutY="310.0" mnemonicParsing="false" onAction="#submitApplicationButtonOA" prefHeight="26.0" prefWidth="95.0" text="Submit" />
-      <Label fx:id="errorLabel" layoutX="502.0" layoutY="313.0" prefHeight="20.0" prefWidth="152.0" textFill="#e4adad">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <TableView fx:id="FinancialAidTV" layoutX="170.0" layoutY="380.0" prefHeight="180.0" prefWidth="540.0">
+      <TableView fx:id="fiancialAidTV" layoutX="51.0" layoutY="492.0" prefHeight="174.0" prefWidth="807.0" style="-fx-background-color: white;">
          <columns>
-            <TableColumn fx:id="aidTypeTC" prefWidth="120.0" text="Aid Type" />
-            <TableColumn fx:id="amountTC" prefWidth="80.0" text="Amount" />
-            <TableColumn fx:id="dateTC" prefWidth="100.0" text="Applied Date" />
-            <TableColumn fx:id="statusTC" prefWidth="120.0" text="Status" />
+            <TableColumn fx:id="WorkerIdTc" prefWidth="150.0" text="Worker ID:" />
+            <TableColumn fx:id="amountTC" prefWidth="150.0" text="Amount" />
+            <TableColumn fx:id="aidTypeTC" prefWidth="112.79995727539062" text="Aid Type" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text="Column X" />
+            <TableColumn fx:id="reasonTC" prefWidth="148.0" text="reason" />
+            <TableColumn fx:id="acceptTC" prefWidth="176.7999267578125" text="Accepted Agreement" />
          </columns>
       </TableView>
+      <Button layoutX="334.0" layoutY="448.0" mnemonicParsing="false" onAction="#SubmitbuttonOA" prefHeight="18.0" prefWidth="90.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Submit" textFill="WHITE" />
    </children>
 </AnchorPane>
