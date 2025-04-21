@@ -10,6 +10,7 @@ public class LeaveRequest {
     private String contactinfo;
     private String reason;
 
+
     public LeaveRequest(String leaveType, LocalDate startDate, LocalDate endDate, String contactinfo, String reason) {
         LeaveType = leaveType;
         StartDate = startDate;
@@ -57,6 +58,7 @@ public class LeaveRequest {
     public void setReason(String reason) {
         this.reason = reason;
     }
+
     @Override
     public String toString() {
         return "LeaveRequest{" +

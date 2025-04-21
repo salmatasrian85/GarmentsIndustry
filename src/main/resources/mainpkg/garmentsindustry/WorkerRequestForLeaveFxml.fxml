@@ -4,10 +4,10 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TreeTableColumn?>
-<?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -73,12 +73,15 @@
             </HBox>
          </children>
       </VBox>
-      <Label layoutX="589.0" layoutY="107.0" prefHeight="322.0" prefWidth="186.0" text="Label" />
-      <TreeTableView layoutX="24.0" layoutY="477.0" prefHeight="185.0" prefWidth="786.0">
+      <Label fx:id="ErrorL" layoutX="589.0" layoutY="107.0" prefHeight="322.0" prefWidth="186.0" text="Label" />
+      <TableView fx:id="LeaveReqTV" layoutX="35.0" layoutY="478.0" prefHeight="180.0" prefWidth="774.0">
         <columns>
-          <TreeTableColumn prefWidth="75.0" text="C1" />
-          <TreeTableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="LeaveTypeTC" prefWidth="189.60003280639648" text="Leave Type" />
+          <TableColumn fx:id="StartDateTC" minWidth="0.0" prefWidth="166.3999481201172" text="Start Date" />
+            <TableColumn fx:id="EndDateTC" prefWidth="123.99993896484375" text="End Date:" />
+            <TableColumn fx:id="ReasonTC" prefWidth="144.79998779296875" text="Reason for Leave:" />
+            <TableColumn fx:id="ContactInfoTC" prefWidth="151.199951171875" text="Contact Info" />
         </columns>
-      </TreeTableView>
+      </TableView>
    </children>
 </AnchorPane>
