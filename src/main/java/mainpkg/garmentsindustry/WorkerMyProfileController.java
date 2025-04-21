@@ -69,6 +69,5 @@ public class WorkerMyProfileController
          OutputLabel.setText(workerProfile.toString());
 
 
-
     }
 }

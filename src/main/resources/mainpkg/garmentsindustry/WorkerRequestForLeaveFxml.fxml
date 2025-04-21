@@ -6,6 +6,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -30,7 +32,7 @@
             </Label>
          </children>
       </VBox>
-      <VBox alignment="TOP_CENTER" layoutX="69.0" layoutY="107.0" prefHeight="400.0" prefWidth="659.0" spacing="15.0">
+      <VBox alignment="TOP_CENTER" layoutX="69.0" layoutY="107.0" prefHeight="361.0" prefWidth="501.0" spacing="15.0">
          <children>
             <GridPane hgap="10.0" prefHeight="346.0" prefWidth="815.0" vgap="10.0">
                <columnConstraints>
@@ -53,7 +55,7 @@
                   <Label text="End Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
                   <DatePicker fx:id="endDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label text="Contact During Leave:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                  <TextField fx:id="contactField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="contactField" prefHeight="26.0" prefWidth="414.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <Label text="Supporting Document:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
                   <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <children>
@@ -61,7 +63,7 @@
                      </children>
                   </HBox>
                   <Label text="Reason for Leave:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-                  <TextArea fx:id="reasonArea" prefHeight="85.0" prefWidth="419.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextArea fx:id="reasonArea" prefHeight="69.0" prefWidth="420.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                </children>
             </GridPane>
             <HBox alignment="CENTER" spacing="20.0">
@@ -71,6 +73,12 @@
             </HBox>
          </children>
       </VBox>
-      <Label layoutX="70.0" layoutY="515.0" prefHeight="138.0" prefWidth="707.0" text="Label" />
+      <Label layoutX="589.0" layoutY="107.0" prefHeight="322.0" prefWidth="186.0" text="Label" />
+      <TreeTableView layoutX="24.0" layoutY="477.0" prefHeight="185.0" prefWidth="786.0">
+        <columns>
+          <TreeTableColumn prefWidth="75.0" text="C1" />
+          <TreeTableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TreeTableView>
    </children>
 </AnchorPane>

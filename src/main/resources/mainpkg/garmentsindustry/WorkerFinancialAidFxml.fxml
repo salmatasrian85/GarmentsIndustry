@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.WorkerFinancialAidController">
+<AnchorPane prefHeight="711.0" prefWidth="900.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.WorkerFinancialAidController">
    <children>
       <Label layoutX="0.0" layoutY="0.0" prefHeight="80.0" prefWidth="900.0" style="-fx-background-color: #2c3e50; -fx-alignment: CENTER;" text="Bangladesh Garment Workers Welfare Association" textFill="WHITE">
          <font>
@@ -41,7 +41,6 @@
             <CheckBox fx:id="acceptCB" layoutX="56.0" layoutY="316.0" mnemonicParsing="false" text="I accept the terms of the financial aid award (if applicable)." />
             <Label layoutX="56.0" layoutY="19.0" text="Worker ID:" />
             <TextField fx:id="WorkerIDTF" layoutX="186.0" layoutY="14.0" prefWidth="300.0" promptText="Enter Your ID" />
-            <Button layoutX="622.0" layoutY="14.0" mnemonicParsing="false" onAction="#previousApplicationsButtonOA" prefHeight="26.0" prefWidth="170.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="Show All Applications" textFill="WHITE" />
          </children>
       </AnchorPane>
       <TableView fx:id="fiancialAidTV" layoutX="51.0" layoutY="492.0" prefHeight="174.0" prefWidth="807.0" style="-fx-background-color: white;">
@@ -55,5 +54,6 @@
          </columns>
       </TableView>
       <Button layoutX="334.0" layoutY="448.0" mnemonicParsing="false" onAction="#SubmitbuttonOA" prefHeight="18.0" prefWidth="90.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Submit" textFill="WHITE" />
+      <Button layoutX="358.0" layoutY="666.0" mnemonicParsing="false" onAction="#previousApplicationsButtonOA" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="Show All Applications" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -65,7 +65,16 @@ public class WorkerMainDasbaordFxmlController
     }
 
     @javafx.fxml.FXML
-    public void ReportSafetyIssueButtonOA(ActionEvent actionEvent) {
+    public void ReportSafetyIssueButtonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WorkerReportSafetyProblem.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("Worker Report Safety Problem");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
