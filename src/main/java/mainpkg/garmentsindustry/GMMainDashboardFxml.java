@@ -57,7 +57,16 @@ public class GMMainDashboardFxml
     }
 
     @javafx.fxml.FXML
-    public void volunteerEventButtonOA(ActionEvent actionEvent) {
+    public void volunteerEventButtonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GMVolunteerRegistrationFxml.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("GMVolunteerRegistration");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
