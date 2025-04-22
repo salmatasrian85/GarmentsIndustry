@@ -27,7 +27,16 @@ public class WorkerMainDasbaordFxmlController
     }
 
     @javafx.fxml.FXML
-    public void ReqShiftChangeButtonOA(ActionEvent actionEvent) {
+    public void ReqShiftChangeButtonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WorkerShiftChangeFxml.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("Worker Shift change");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
