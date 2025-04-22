@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="610.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.GMFinancialAidSupportFxmlControoller">
+<AnchorPane prefHeight="610.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.GMDonateToFundFxmlControoller">
    <children>
       <Label layoutX="120.0" layoutY="126.0" text="Member ID:" />
       <TextField fx:id="memberIdTextField" layoutX="250.0" layoutY="121.0" prefWidth="250.0" />
@@ -53,5 +53,6 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <Label fx:id="errorLabel" layoutX="541.0" layoutY="138.0" prefHeight="190.0" prefWidth="286.0" text="Label" />
    </children>
 </AnchorPane>
