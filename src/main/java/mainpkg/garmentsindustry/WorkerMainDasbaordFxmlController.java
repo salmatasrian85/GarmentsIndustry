@@ -70,7 +70,16 @@ public class WorkerMainDasbaordFxmlController
     }
 
     @javafx.fxml.FXML
-    public void RegForHealthProgramButtonOA(ActionEvent actionEvent) {
+    public void RegForHealthProgramButtonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WorkerMedicalAidFxml.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("WorkerMedicalAid");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML

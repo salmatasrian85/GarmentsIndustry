@@ -63,7 +63,7 @@ public class WorkerRequestForLeaveController
         String error = "";
         boolean flag = true;
 
-        if (leaveType.isEmpty()) {
+        if (leaveTypeCombo.getValue()==null) {
             flag = false;
             error += "Leave type is required.\n";
         }
