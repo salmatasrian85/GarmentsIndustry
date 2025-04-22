@@ -6,6 +6,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class WorkerTraingProgrammeFxmlController
 {
@@ -111,5 +112,14 @@ public class WorkerTraingProgrammeFxmlController
 
     @javafx.fxml.FXML
     public void filterButtonOA(ActionEvent actionEvent) {
+        trainingTable.getItems().clear();
+        String selectedTraining = TrainingsComboFilter.getValue();
+
+        for (TrainingProgramme tp : trainingProgrammeList) {
+            if (Objects.equals(tp.getTrainingType(), selectedTraining)) {
+                trainingTable.getItems().add(tp);
+            }
+        }
+
     }
 }

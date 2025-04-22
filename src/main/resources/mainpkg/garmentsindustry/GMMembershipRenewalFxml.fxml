@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="540.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.GMMembershipRenewalFxmlController">
+   <children>
+      <AnchorPane layoutX="153.0" layoutY="126.0" prefHeight="399.0" prefWidth="501.0" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="64.0" layoutY="18.0" text="Member ID:" />
+            <TextField fx:id="memberIdTextField" layoutX="194.0" layoutY="13.0" prefWidth="250.0" />
+            <Label layoutX="64.0" layoutY="58.0" text="Full Name:" />
+            <TextField fx:id="fullNameTextField" layoutX="194.0" layoutY="53.0" prefWidth="250.0" />
+            <Label layoutX="64.0" layoutY="98.0" text="Renewal Date:" />
+            <DatePicker fx:id="renewalDatePicker" layoutX="194.0" layoutY="93.0" prefWidth="250.0" />
+            <Label layoutX="64.0" layoutY="138.0" text="Renewal Duration:" />
+            <ComboBox fx:id="durationCombo" layoutX="194.0" layoutY="133.0" prefWidth="250.0" />
+            <Button layoutX="194.0" layoutY="178.0" mnemonicParsing="false" onAction="#submitRenewalButtonOA" prefWidth="120.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Renew" />
+            <TableView fx:id="renewTV" layoutX="-8.0" layoutY="211.0" prefHeight="200.0" prefWidth="649.0">
+              <columns>
+                <TableColumn fx:id="memberIdTC" prefWidth="114.39996337890625" text="Member ID:" />
+                <TableColumn fx:id="nameTC" prefWidth="113.5999755859375" text="Full Name:" />
+                  <TableColumn fx:id="dateTC" prefWidth="113.5999755859375" text="Renewal Date:" />
+                  <TableColumn fx:id="durationTC" prefWidth="113.5999755859375" text="Renewal Duration:" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="655.0" layoutY="514.0" mnemonicParsing="false" onAction="#backToDashboardButtonOA" prefWidth="130.0" style="-fx-background-color: gray;" text="Back to Dashboard" />
+      <Label layoutY="-4.0" prefHeight="84.0" prefWidth="906.0" style="-fx-background-color: #2c3e50; -fx-alignment: CENTER;" text="Bangladesh Garment Workers Welfare Association" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutY="63.0" prefHeight="46.0" prefWidth="906.0" style="-fx-background-color: #2c3e50; -fx-alignment: CENTER;" text="Membership Renewal" textFill="#ecf0f1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="ErrorL" layoutX="595.0" layoutY="111.0" prefHeight="258.0" prefWidth="238.0" />
+   </children>
+</AnchorPane>
