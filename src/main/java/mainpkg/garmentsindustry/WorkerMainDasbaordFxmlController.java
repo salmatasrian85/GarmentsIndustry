@@ -40,7 +40,16 @@ public class WorkerMainDasbaordFxmlController
     }
 
     @javafx.fxml.FXML
-    public void RegisterforTrainingProgramButtonOA(ActionEvent actionEvent) {
+    public void RegisterforTrainingProgramButtonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WorkerTraingProgrammeFxml.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("WorkerTraingProgramme");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
