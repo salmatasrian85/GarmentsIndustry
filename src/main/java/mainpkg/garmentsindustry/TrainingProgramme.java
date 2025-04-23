@@ -60,9 +60,16 @@ public class TrainingProgramme {
         this.currentlyWorking = currentlyWorking;
     }
 
-
     @Override
     public String toString() {
-        return STR."TrainingProgramme{name='\{name}', trainingType='\{trainingType}', preferredDate=\{preferredDate}, time='\{time}', currentlyWorking=\{currentlyWorking}}";
+        return "TrainingProgramme{" +
+                "name='" + name + '\'' +
+                ", trainingType='" + trainingType + '\'' +
+                ", preferredDate=" + preferredDate +
+                ", time='" + time + '\'' +
+                ", currentlyWorking=" + currentlyWorking +
+                '}';
     }
+
+
 }
