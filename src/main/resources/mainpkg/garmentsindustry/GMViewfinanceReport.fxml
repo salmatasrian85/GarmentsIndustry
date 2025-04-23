@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.GMViewfinanceReportFxmlController">
+   <children>
+      <Label layoutX="200.0" layoutY="20.0" text="Financial Report Details" />
+      <Button fx:id="backButton" layoutX="10.0" layoutY="350.0" onAction="#goBackToReportList" prefWidth="150.0" text="Back to Report List" />
+      <TableView fx:id="reportDetailsTable" layoutX="50.0" layoutY="60.0" prefHeight="250.0" prefWidth="500.0">
+         <columns>
+            <TableColumn fx:id="reportTypeColumn" prefWidth="150.0" text="Report Type" />
+            <TableColumn fx:id="reportDateColumn" prefWidth="150.0" text="Date" />
+            <TableColumn fx:id="reportDescriptionColumn" prefWidth="200.0" text="Description" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

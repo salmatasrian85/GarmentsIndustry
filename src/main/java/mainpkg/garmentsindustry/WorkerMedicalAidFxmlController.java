@@ -6,6 +6,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class WorkerMedicalAidFxmlController
 {
@@ -25,8 +26,6 @@ public class WorkerMedicalAidFxmlController
     private TableView <MedicalAid> medicalAidTable;
     @javafx.fxml.FXML
     private TextArea descriptionTA;
-    @javafx.fxml.FXML
-    private ComboBox <String>dateFilterCombo;
     @javafx.fxml.FXML
     private RadioButton maleRadio;
     @javafx.fxml.FXML
@@ -48,19 +47,21 @@ public class WorkerMedicalAidFxmlController
     @javafx.fxml.FXML
     private TableColumn <MedicalAid,String>symptomTC;
 
-
-    ArrayList<MedicalAid> medicalAidArrayList = new ArrayList<>();
-
     @javafx.fxml.FXML
     private TableColumn <MedicalAid,String> curentlyWorkingTC;
     @javafx.fxml.FXML
     private CheckBox cuurenWorkCB;
     @javafx.fxml.FXML
     private ComboBox <String>symtompComo;
+    @javafx.fxml.FXML
+    private ComboBox<String> healthServiceFilterCombp;
+
+    ArrayList<MedicalAid> medicalAidArrayList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
         healthServiceCombo.getItems().addAll("General Check-up", "Dental Care", "Eye Examination", "Gynecological Services", "Mental Health Counseling", "First Aid & Emergency Care");
+        healthServiceFilterCombp.getItems().addAll("General Check-up", "Dental Care", "Eye Examination", "Gynecological Services", "Mental Health Counseling", "First Aid & Emergency Care");
         timeCombo.getItems().addAll("08:00 AM - 09:00 AM", "09:00 AM - 10:00 AM", "10:00 AM - 11:00 AM", "11:00 AM - 12:00 PM", "12:00 PM - 01:00 PM");
         symtompComo.getItems().addAll("fever","cough","fatigue","other");
 
@@ -70,7 +71,7 @@ public class WorkerMedicalAidFxmlController
         symptomTC.setCellValueFactory(new PropertyValueFactory<>("symptom"));
         descriptionTC.setCellValueFactory(new PropertyValueFactory<>("description"));
         prefferedDateTC.setCellValueFactory(new PropertyValueFactory<>("preferredDate"));
-        curentlyWorkingTC.setCellValueFactory(new PropertyValueFactory<>("symptom"));
+        curentlyWorkingTC.setCellValueFactory(new PropertyValueFactory<>("currentlyWorking"));
     }
 
     @javafx.fxml.FXML
@@ -134,7 +135,16 @@ public class WorkerMedicalAidFxmlController
         if (flag){
             MedicalAid medicalAid = new MedicalAid(name,healthService,time,gender,symptom,description,preferredDate);
             medicalAidArrayList.add(medicalAid);
-            medicalAidTable.getItems().add(medicalAid);
+            medicalAidTable.getItems().clear();
+            medicalAidTable.getItems().addAll(medicalAidArrayList);
+
+            nameTextField.clear();
+            healthServiceCombo.setValue(null);
+            timeCombo.setValue(null);
+            preferredDatePicker.setValue(null);
+            symtompComo.setValue(null);
+            descriptionTA.clear();
+            ErrorL.setText("");
 
         }
 
@@ -142,5 +152,15 @@ public class WorkerMedicalAidFxmlController
 
     @javafx.fxml.FXML
     public void filterButtonOA(ActionEvent actionEvent) {
+        medicalAidTable.getItems().clear();;
+        String healthService = healthServiceFilterCombp.getValue();
+
+        for (MedicalAid medicalAid:medicalAidArrayList){
+            if (Objects.equals(medicalAid.getHealthService(), healthService)) {
+                medicalAidTable.getItems().add(medicalAid);
+            }
+
+        }
+
     }
 }

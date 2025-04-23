@@ -48,7 +48,7 @@
             <ComboBox fx:id="timeCombo" layoutX="174.0" layoutY="135.0" prefWidth="300.0" />
             <Label layoutX="51.0" layoutY="12.0" text="Name" />
             <TextField fx:id="nameTextField" layoutX="174.0" layoutY="8.0" prefHeight="26.0" prefWidth="226.0" />
-            <ComboBox fx:id="dateFilterCombo" layoutX="12.0" layoutY="358.0" prefWidth="200.0" promptText="health services" />
+            <ComboBox fx:id="healthServiceFilterCombp" layoutX="12.0" layoutY="358.0" prefWidth="200.0" promptText="health services" />
             <Button layoutX="216.0" layoutY="358.0" mnemonicParsing="false" onAction="#filterButtonOA" prefWidth="80.0" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Filter" />
             <Button layoutX="250.0" layoutY="319.0" mnemonicParsing="false" onAction="#confirmRegistrationOA" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Confirm Registration" />
             <ComboBox fx:id="symtompComo" layoutX="182.0" layoutY="199.0" prefWidth="300.0" />

@@ -33,7 +33,16 @@ public class AllUsersFxmlController
     }
 
     @javafx.fxml.FXML
-    public void generalMemberbuttonOA(ActionEvent actionEvent) {
+    public void generalMemberbuttonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GMMainDashboradFxml.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("GMMainDashborad");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
