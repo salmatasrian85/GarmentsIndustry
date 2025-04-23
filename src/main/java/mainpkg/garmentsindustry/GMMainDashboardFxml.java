@@ -70,7 +70,16 @@ public class GMMainDashboardFxml
     }
 
     @javafx.fxml.FXML
-    public void voteElectionButtonOA(ActionEvent actionEvent) {
+    public void voteElectionButtonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GMElectionVoteFxml.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("GMElectionVote");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
