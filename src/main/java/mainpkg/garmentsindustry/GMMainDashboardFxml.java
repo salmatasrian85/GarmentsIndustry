@@ -27,7 +27,16 @@ public class GMMainDashboardFxml
     }
 
     @javafx.fxml.FXML
-    public void viewReportsButtonOA(ActionEvent actionEvent) {
+    public void viewReportsButtonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GMViewfinanceReport.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("GMViewfinanceReport");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -100,6 +109,15 @@ public class GMMainDashboardFxml
     }
 
     @javafx.fxml.FXML
-    public void myActivityButtonOA(ActionEvent actionEvent) {
+    public void myActivityButtonOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GMActivityLogFxml.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("GMActivityLogFxml");
+
+        stage.setScene(scene);
+        stage.show();
     }
 }
