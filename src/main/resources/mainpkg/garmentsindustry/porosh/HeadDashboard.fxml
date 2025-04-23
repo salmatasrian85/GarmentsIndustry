@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.porosh.HeadDashboard">
+   <children>
+      <Label layoutX="206.0" layoutY="14.0" text="Dashboard Head">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="115.0" layoutY="82.0" mnemonicParsing="false" onAction="#u1g1" text="Monthly Summary Report" />
+      <Button layoutX="84.0" layoutY="135.0" mnemonicParsing="false" onAction="#u1g2" text="Approve Budget for Welfare Activities" />
+      <Button layoutX="88.0" layoutY="184.0" mnemonicParsing="false" onAction="#u1g3" text="Conduct Policy Review Meeting" />
+      <Button layoutX="79.0" layoutY="229.0" mnemonicParsing="false" onAction="#u1g4" text="Monitor Complaint Resolution Progress" />
+      <Button layoutX="343.0" layoutY="184.0" mnemonicParsing="false" onAction="#u1g7" text="Communicate Association Announcements" />
+      <Button layoutX="343.0" layoutY="82.0" mnemonicParsing="false" onAction="#u1g5" text="Audit Welfare Fund Usage" />
+      <Button layoutX="343.0" layoutY="135.0" mnemonicParsing="false" onAction="#u1g6" text="Approve New Member Registration" />
+      <Button layoutX="343.0" layoutY="229.0" mnemonicParsing="false" onAction="#u1g8" text=" Evaluate Welfare Program Impact" />
+   </children>
+</AnchorPane>

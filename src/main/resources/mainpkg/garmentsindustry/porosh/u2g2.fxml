@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="594.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.porosh.U2g2">
+   <children>
+      <Label layoutX="236.0" layoutY="21.0" text="Safety Equipment Request">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="98.0" text="Department" />
+      <Label layoutX="48.0" layoutY="158.0" text=" Equipment Type" />
+      <Label layoutX="48.0" layoutY="210.0" text="Quantity " />
+      <Label layoutX="48.0" layoutY="258.0" text="Required By Date" />
+      <ComboBox fx:id="DepartmentCombobox" layoutX="209.0" layoutY="94.0" prefHeight="26.0" prefWidth="224.0" />
+      <TextField fx:id="EquipmentTypeTextField" layoutX="210.0" layoutY="154.0" prefHeight="26.0" prefWidth="224.0" />
+      <TextField fx:id="QuantityTextfield" layoutX="210.0" layoutY="206.0" prefHeight="26.0" prefWidth="224.0" />
+      <DatePicker fx:id="RequiredByDateDatePicker" layoutX="211.0" layoutY="254.0" prefHeight="26.0" prefWidth="224.0" />
+      <Button layoutX="579.0" layoutY="254.0" mnemonicParsing="false" onAction="#SaveButton" text="Save" />
+      <TableView layoutX="65.0" layoutY="355.0" prefHeight="200.0" prefWidth="682.0">
+        <columns>
+          <TableColumn fx:id="DepartmentTableColumn" prefWidth="150.40001678466797" text="Department" />
+          <TableColumn fx:id="EquipmentTypeTableColumn" prefWidth="183.20001220703125" text=" Equipment Type" />
+            <TableColumn fx:id="QuantityTableColumn" prefWidth="178.40005493164062" text="Quantity " />
+            <TableColumn fx:id="RequiredByDateTableColumn" prefWidth="172.00006103515625" text="Required By Date" />
+        </columns>
+      </TableView>
+      <Label fx:id="Errormasseglabel" layoutX="362.0" layoutY="562.0" text="Error masseg" />
+      <Button layoutX="14.0" layoutY="22.0" mnemonicParsing="false" onAction="#DashboardOnActionButton" text="Dashboard" />
+   </children>
+</AnchorPane>

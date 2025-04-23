@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.porosh.ManufacturerDashboard">
+   <children>
+      <Label layoutX="198.0" layoutY="23.0" text="Dashboard Head">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="107.0" layoutY="91.0" mnemonicParsing="false" onAction="#u2g1" text="Broadcast Message" />
+      <Button layoutX="76.0" layoutY="144.0" mnemonicParsing="false" onAction="#u2g2" text="Approve Budget for Welfare Activities" />
+      <Button layoutX="80.0" layoutY="193.0" mnemonicParsing="false" onAction="#u2g3" text="Safety Equipment Request" />
+      <Button layoutX="74.0" layoutY="238.0" mnemonicParsing="false" onAction="#u2g4" text="Nominate Worker for Welfare Support" />
+      <Button layoutX="335.0" layoutY="193.0" mnemonicParsing="false" onAction="#u2g7" text="Provide Feedback on Welfare Services" />
+      <Button layoutX="335.0" layoutY="91.0" mnemonicParsing="false" onAction="#u2g5" text=" Worker Welfare Participation" />
+      <Button layoutX="335.0" layoutY="144.0" mnemonicParsing="false" onAction="#u2g6" text="Provide Feedback on Welfare Services" />
+      <Button layoutX="335.0" layoutY="238.0" mnemonicParsing="false" onAction="#u2g8" text="Worker Grievance Tracker" />
+   </children>
+</AnchorPane>

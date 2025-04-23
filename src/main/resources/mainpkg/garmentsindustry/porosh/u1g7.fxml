@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnnouncementTitleTF" prefHeight="523.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.porosh.U1g7">
+   <children>
+      <Label layoutX="282.0" layoutY="14.0" text="Broadcast Message">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="174.0" layoutY="69.0" text="Announcement Title" />
+      <TableView layoutX="34.0" layoutY="300.0" prefHeight="200.0" prefWidth="697.0">
+        <columns>
+          <TableColumn fx:id="AnnouncementTitleTC" prefWidth="168.00000381469727" text="Announcement Title" />
+          <TableColumn fx:id="SelectAudienceTC" prefWidth="114.40000915527344" text="Select Audience" />
+            <TableColumn fx:id="ScheduleDateTC" prefWidth="105.5999755859375" text="Schedule Date" />
+            <TableColumn fx:id="RecipientNameTC" prefWidth="114.40008544921875" text="Recipient Name" />
+            <TableColumn fx:id="DepartmentTC" prefWidth="113.60003662109375" text="Department" />
+            <TableColumn fx:id="SeenTC" prefWidth="83.199951171875" text="Seen" />
+        </columns>
+      </TableView>
+      <TextField fx:id="AnnouncementTitleTF" layoutX="301.0" layoutY="65.0" prefHeight="26.0" prefWidth="164.0" promptText="AnnouncementTitle" />
+      <Label layoutX="174.0" layoutY="104.0" text="Select Audience" />
+      <ComboBox fx:id="SelectAudienceCB" layoutX="301.0" layoutY="100.0" prefHeight="26.0" prefWidth="164.0" />
+      <Label layoutX="174.0" layoutY="146.0" text="Schedule Date" />
+      <DatePicker fx:id="ScheduleDateDP" layoutX="303.0" layoutY="142.0" prefHeight="26.0" prefWidth="164.0" />
+      <Label layoutX="174.0" layoutY="176.0" text="Recipient Name" />
+      <Label layoutX="174.0" layoutY="206.0" text="Department" />
+      <Label layoutX="506.0" layoutY="69.0" text="Seen" />
+      <RadioButton fx:id="seenYesRadioButton" layoutX="547.0" layoutY="69.0" mnemonicParsing="false" text="YES" />
+      <RadioButton fx:id="SeenNoRadioButton" layoutX="547.0" layoutY="99.0" mnemonicParsing="false" text="No" />
+      <TextField fx:id="RecipientName" layoutX="303.0" layoutY="172.0" prefHeight="26.0" prefWidth="164.0" />
+      <ComboBox fx:id="SelectAudienceCB1" layoutX="303.0" layoutY="202.0" prefHeight="26.0" prefWidth="164.0" />
+      <Button layoutX="411.0" layoutY="250.0" mnemonicParsing="false" onAction="#SubmitOnActionButton" text="Submit" />
+      <Button layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#DashboardOnActionButton" text="Dashboard" />
+   </children>
+</AnchorPane>

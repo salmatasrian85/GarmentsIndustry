@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.porosh.U2g8">
+   <children>
+      <Label layoutX="270.0" layoutY="14.0" text="Worker Grievance Tracker">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="72.0" text="Worker ID" />
+      <Label layoutX="47.0" layoutY="169.0" text="Complaint ID" />
+      <TextField fx:id="WorkerIdTF" layoutX="121.0" layoutY="68.0" />
+      <TextField fx:id="ComplaintIDTF" layoutX="147.0" layoutY="156.0" />
+      <Label layoutX="47.0" layoutY="206.0" text="Worker Name" />
+      <Label layoutX="40.0" layoutY="282.0" text="Department" />
+      <Label layoutX="47.0" layoutY="327.0" text="Type of Complaint" />
+      <TextField fx:id="WorkerNameTF" layoutX="147.0" layoutY="211.0" />
+      <TextField fx:id="DepartmentTC" layoutX="167.0" layoutY="269.0" />
+      <TextField fx:id="TypeofComplaintTF" layoutX="167.0" layoutY="323.0" />
+      <TableView layoutX="72.0" layoutY="379.0" prefHeight="200.0" prefWidth="549.0">
+        <columns>
+          <TableColumn fx:id="WorkerIdTC" prefWidth="121.60004425048828" text="Worker Id" />
+          <TableColumn fx:id="complainIDTC" prefWidth="99.20001220703125" text="complain ID" />
+            <TableColumn fx:id="WorkerNameTC" prefWidth="114.4000244140625" text="Worker Name" />
+            <TableColumn fx:id="DepartmentTC" prefWidth="107.19998168945312" text="Department" />
+            <TableColumn fx:id="TypeofComplaintTC" prefWidth="108.800048828125" text="Type of Complaint" />
+        </columns>
+      </TableView>
+      <Button layoutX="503.0" layoutY="187.0" mnemonicParsing="false" onAction="#submitOnActionButton" text="submit" />
+   </children>
+</AnchorPane>

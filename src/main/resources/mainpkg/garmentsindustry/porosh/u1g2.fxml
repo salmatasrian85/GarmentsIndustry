@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.garmentsindustry.porosh.U1g2">
+   <children>
+      <Label layoutX="240.0" layoutY="14.0" text="Welfare Budget Requests">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="RequestIDTC" layoutX="44.0" layoutY="51.0" text="Request ID" />
+      <TextField fx:id="RequestIDTF" layoutX="168.0" layoutY="47.0" />
+      <TextField fx:id="DepartmentTF" layoutX="169.0" layoutY="86.0" />
+      <TextField fx:id="DescriptionTF" layoutX="477.0" layoutY="50.0" />
+      <Label layoutX="35.0" layoutY="90.0" text="Department" />
+      <Label layoutX="40.0" layoutY="169.0" text="Submission Date" />
+      <DatePicker fx:id="SubmissionDateDP" layoutX="167.0" layoutY="165.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label fx:id="DescriptionTC" layoutX="350.0" layoutY="54.0" text="Description" />
+      <Label layoutX="353.0" layoutY="102.0" text="Proposed Budget" />
+      <TextField fx:id="ProposedBudgetTF" layoutX="475.0" layoutY="98.0" />
+      <Label layoutX="331.0" layoutY="146.0" text="Current Fund Available" />
+      <TextField fx:id="CurrentFundAvailableTF" layoutX="477.0" layoutY="142.0" />
+      <Button layoutX="512.0" layoutY="177.0" mnemonicParsing="false" onAction="#SubmitDecisionOnActionButton" text="Submit Decision" />
+      <Label layoutX="40.0" layoutY="130.0" text="Amount" />
+      <TextField fx:id="AmountTF" layoutX="169.0" layoutY="126.0" />
+      <TableView layoutX="23.0" layoutY="246.0" prefHeight="200.0" prefWidth="659.0">
+        <columns>
+          <TableColumn fx:id="RequestIDTC" prefWidth="75.0" text="Request ID" />
+          <TableColumn fx:id="DepartmentTC" prefWidth="75.0" text="Department" />
+            <TableColumn fx:id="DepartmentTC1" prefWidth="75.0" text="Amount" />
+            <TableColumn fx:id="SubmissionDateTC" prefWidth="106.4000244140625" text="Submission Date" />
+            <TableColumn fx:id="SubmissionDateTC1" prefWidth="106.4000244140625" text="Description" />
+            <TableColumn fx:id="SubmissionDateTC11" prefWidth="106.4000244140625" text="Proposed Budget" />
+            <TableColumn fx:id="SubmissionDateTC111" prefWidth="106.4000244140625" text="Current Fund Available" />
+        </columns>
+      </TableView>
+      <Label fx:id="ErrormassageLabel" layoutX="302.0" layoutY="467.0" text="Error massage" />
+      <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#DashboardOnActionButton" text="Dashboard" />
+   </children>
+</AnchorPane>
